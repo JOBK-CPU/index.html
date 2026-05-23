@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RebeccaBiw0ttExplores | Africa Through My Eyes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --gold: #D4A017;
+  --amber: #E8890C;
+  --forest: #2D5016;
+  --earth: #8B4513;
+  --cream: #FDF6EC;
+  --dark: #1A0A00;
+  --mid: #3D1F00;
+  --light-gold: #F5E6C8;
+  --green: #4A7C2F;
+  --red: #8B1A1A;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: 'Raleway', sans-serif; background: var(--cream); color: var(--dark); overflow-x: hidden; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 1000;
+  background: rgba(26,10,0,0.97); backdrop-filter: blur(10px);
+  padding: 0 40px; display: flex; justify-content: space-between; align-items: center;
+  height: 70px; border-bottom: 2px solid var(--gold);
+  animation: slideDown 0.8s ease;
+}
+@keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; }
+.logo-text { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; }
+.logo-text span { color: #fff; font-style: italic; }
+.nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
+.nav-links a { color: #ccc; text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta { background: var(--gold); color: var(--dark) !important; padding: 8px 20px; border-radius: 25px; font-weight: 700 !important; }
+.nav-cta:hover { background: var(--amber) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 25px; height: 2px; background: var(--gold); }
+
+/* HERO */
+.hero {
+  height: 100vh; position: relative; display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1600') center/cover no-repeat;
+  animation: zoomIn 20s ease infinite alternate;
+}
+@keyframes zoomIn { from { transform: scale(1); } to { transform: scale(1.08); } }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(26,10,0,0.85) 0%, rgba(45,80,22,0.5) 50%, rgba(26,10,0,0.8) 100%);
+}
+.hero-content { position: relative; text-align: center; color: white; padding: 20px; animation: fadeUp 1.2s ease 0.3s both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+.hero-badge { display: inline-block; background: var(--gold); color: var(--dark); padding: 6px 20px; border-radius: 30px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.hero h1 em { color: var(--gold); font-style: italic; }
+.hero p { font-size: 1.15rem; max-width: 600px; margin: 0 auto 35px; color: #e0d5c5; line-height: 1.8; font-weight: 300; }
+.hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: var(--gold); color: var(--dark); padding: 14px 35px; border-radius: 40px; text-decoration: none; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; box-shadow: 0 5px 25px rgba(212,160,23,0.4); }
+.btn-primary:hover { background: var(--amber); transform: translateY(-3px); box-shadow: 0 10px 35px rgba(212,160,23,0.5); }
+.btn-outline { border: 2px solid white; color: white; padding: 14px 35px; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; }
+.btn-outline:hover { background: white; color: var(--dark); transform: translateY(-3px); }
+.hero-scroll { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: var(--gold); animation: bounce 2s ease infinite; font-size: 1.4rem; cursor: pointer; }
+@keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(10px); } }
+
+/* PROFILE STRIP */
+.profile-strip {
+  background: var(--dark); padding: 60px 40px;
+  display: flex; align-items: center; gap: 50px; flex-wrap: wrap; justify-content: center;
+}
+.profile-img-wrap { position: relative; flex-shrink: 0; }
+.profile-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid var(--gold); box-shadow: 0 0 40px rgba(212,160,23,0.4); animation: pulse 3s ease infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 40px rgba(212,160,23,0.4); } 50% { box-shadow: 0 0 60px rgba(212,160,23,0.7); } }
+.profile-badge { position: absolute; bottom: 5px; right: 5px; background: var(--gold); border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+.profile-info { max-width: 500px; }
+.profile-info h2 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 2.2rem; margin-bottom: 8px; }
+.profile-info .tagline { color: #ccc; font-size: 0.95rem; font-style: italic; margin-bottom: 15px; }
+.profile-info p { color: #aaa; line-height: 1.8; font-size: 0.95rem; }
+.profile-stats { display: flex; gap: 30px; margin-top: 25px; flex-wrap: wrap; }
+.stat { text-align: center; }
+.stat-num { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.8rem; font-weight: 900; display: block; }
+.stat-label { color: #888; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* SECTION HEADERS */
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-label { display: inline-block; background: var(--light-gold); color: var(--earth); padding: 5px 18px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--dark); margin-bottom: 12px; }
+.section-header p { color: #777; max-width: 550px; margin: 0 auto; line-height: 1.7; }
+.divider { width: 60px; height: 3px; background: var(--gold); margin: 15px auto 0; border-radius: 2px; }
+
+/* BLOG */
+.blog-section { padding: 80px 40px; background: var(--cream); }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+.blog-card {
+  background: white; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer; animation: fadeUp 0.6s ease both;
+}
+.blog-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+.blog-card:nth-child(1) { animation-delay: 0.1s; }
+.blog-card:nth-child(2) { animation-delay: 0.2s; }
+.blog-card:nth-child(3) { animation-delay: 0.3s; }
+.blog-card:nth-child(4) { animation-delay: 0.4s; }
+.blog-card:nth-child(5) { animation-delay: 0.5s; }
+.blog-img-wrap { position: relative; overflow: hidden; height: 220px; }
+.blog-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.blog-card:hover .blog-img-wrap img { transform: scale(1.08); }
+.blog-cat { position: absolute; top: 15px; left: 15px; background: var(--gold); color: var(--dark); padding: 4px 14px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.blog-body { padding: 22px; }
+.blog-meta { color: #999; font-size: 0.78rem; margin-bottom: 10px; display: flex; gap: 15px; align-items: center; }
+.blog-meta i { color: var(--gold); }
+.blog-body h4 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--dark); margin-bottom: 10px; line-height: 1.4; }
+.blog-body p { color: #666; font-size: 0.88rem; line-height: 1.7; }
+.blog-read { display: inline-flex; align-items: center; gap: 6px; color: var(--earth); font-weight: 700; font-size: 0.82rem; margin-top: 15px; text-decoration: none; transition: gap 0.3s; }
+.blog-read:hover { gap: 10px; color: var(--gold); }
+
+/* VLOGS */
+.vlog-section { padding: 80px 40px; background: var(--dark); }
+.vlog-section .section-header h2 { color: white; }
+.vlog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+.vlog-card {
+  background: var(--mid); border-radius: 14px; overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.vlog-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+.vlog-thumb { position: relative; overflow: hidden; height: 200px; }
+.vlog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.vlog-card:hover .vlog-thumb img { transform: scale(1.06); }
+.vlog-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+.vlog-card:hover .vlog-overlay { background: rgba(0,0,0,0.2); }
+.play-btn { width: 60px; height: 60px; border-radius: 50%; background: rgba(212,160,23,0.9); border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: white; transition: transform 0.3s, background 0.3s; }
+.vlog-card:hover .play-btn { transform: scale(1.15); background: var(--gold); }
+.vlog-duration { position: absolute; bottom: 10px; right: 12px; background: rgba(0,0,0,0.8); color: white; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+.vlog-body { padding: 18px; }
+.vlog-tag { display: inline-block; background: rgba(212,160,23,0.2); color: var(--gold); font-size: 0.72rem; padding: 3px 10px; border-radius: 15px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+.vlog-body h4 { color: white; font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 8px; line-height: 1.4; }
+.vlog-body p { color: #aaa; font-size: 0.83rem; line-height: 1.6; }
+.vlog-stats { display: flex; gap: 15px; margin-top: 12px; color: #888; font-size: 0.78rem; }
+.vlog-stats span i { color: var(--gold); margin-right: 4px; }
+
+/* GALLERY */
+.gallery-section { padding: 80px 40px; background: #f8f0e3; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 180px;
+  gap: 8px;
+}
+.gallery-item { overflow: hidden; border-radius: 10px; cursor: pointer; position: relative; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.gallery-item:hover img { transform: scale(1.1); }
+.gallery-item::after { content: ''; position: absolute; inset: 0; background: rgba(212,160,23,0); transition: background 0.3s; }
+.gallery-item:hover::after { background: rgba(212,160,23,0.15); }
+.gallery-item.wide { grid-column: span 2; }
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item.big { grid-column: span 2; grid-row: span 2; }
+
+/* UPLOAD SECTION */
+.upload-section { padding: 60px 40px; background: var(--dark); text-align: center; }
+.upload-section h2 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 2rem; margin-bottom: 10px; }
+.upload-section p { color: #aaa; margin-bottom: 30px; }
+.upload-box {
+  border: 3px dashed var(--gold); border-radius: 20px; padding: 50px 40px;
+  max-width: 600px; margin: 0 auto; cursor: pointer; transition: background 0.3s;
+  background: rgba(212,160,23,0.05);
+}
+.upload-box:hover { background: rgba(212,160,23,0.1); }
+.upload-box i { font-size: 3rem; color: var(--gold); margin-bottom: 15px; display: block; }
+.upload-box p { color: #888; font-size: 0.95rem; }
+.upload-box span { color: var(--gold); font-weight: 700; }
+#fileInput { display: none; }
+.upload-btn { background: var(--gold); color: var(--dark); border: none; padding: 14px 40px; border-radius: 30px; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 20px; transition: all 0.3s; }
+.upload-btn:hover { background: var(--amber); transform: translateY(-3px); }
+.uploaded-preview { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; justify-content: center; }
+.uploaded-preview img { width: 100px; height: 100px; object-fit: cover; border-radius: 10px; border: 2px solid var(--gold); animation: fadeUp 0.4s ease; }
+
+/* ABOUT */
+.about-section {
+  padding: 80px 40px; 
+  background: linear-gradient(135deg, #1a0a00 0%, #2D5016 50%, #1a0a00 100%);
+  position: relative; overflow: hidden;
+}
+.about-section::before { content: '🌍'; position: absolute; font-size: 20rem; opacity: 0.04; top: -50px; right: -50px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 70px; align-items: center; max-width: 1100px; margin: 0 auto; }
+.about-img-wrap { position: relative; }
+.about-img { width: 100%; border-radius: 20px; object-fit: cover; height: 520px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+.about-img-accent { position: absolute; bottom: -20px; right: -20px; width: 70%; height: 70%; border: 4px solid var(--gold); border-radius: 20px; z-index: -1; }
+.about-content .section-label { background: rgba(212,160,23,0.2); color: var(--gold); }
+.about-content h2 { font-family: 'Playfair Display', serif; color: white; font-size: 2.4rem; line-height: 1.3; margin-bottom: 20px; }
+.about-content h2 em { color: var(--gold); }
+.about-content p { color: #bbb; line-height: 1.9; margin-bottom: 15px; font-size: 0.95rem; }
+.about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0; }
+.about-tag { background: rgba(212,160,23,0.15); border: 1px solid rgba(212,160,23,0.4); color: var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+
+/* SOCIAL FLOATING */
+.social-float {
+  position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 12px; z-index: 999;
+}
+.social-float a {
+  width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; color: white; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.social-float a:hover { transform: scale(1.2); }
+.s-tiktok { background: #000; border: 1px solid #333; }
+.s-facebook { background: #1877F2; }
+.s-instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+.s-whatsapp { background: #25D366; }
+
+/* MESSAGES / CHAT */
+.chat-btn {
+  position: fixed; bottom: 30px; right: 80px; z-index: 999;
+  background: var(--gold); color: var(--dark); border: none; border-radius: 50px;
+  padding: 15px 25px; display: flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 0.9rem; cursor: pointer;
+  box-shadow: 0 8px 30px rgba(212,160,23,0.5); transition: all 0.3s;
+  animation: chatPulse 2s ease infinite;
+}
+@keyframes chatPulse { 0%,100% { box-shadow: 0 8px 30px rgba(212,160,23,0.5); } 50% { box-shadow: 0 8px 50px rgba(212,160,23,0.8); } }
+.chat-btn:hover { background: var(--amber); transform: translateY(-3px); }
+.chat-panel {
+  position: fixed; bottom: 100px; right: 20px; width: 340px; z-index: 998;
+  background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  display: none; flex-direction: column; overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.chat-panel.open { display: flex; }
+.chat-header { background: var(--dark); padding: 18px 20px; display: flex; align-items: center; gap: 12px; }
+.chat-header img { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; }
+.chat-header-info h4 { color: white; font-size: 0.95rem; }
+.chat-header-info span { color: #4CAF50; font-size: 0.78rem; }
+.chat-close { margin-left: auto; background: none; border: none; color: #aaa; font-size: 1.2rem; cursor: pointer; }
+.chat-messages { flex: 1; padding: 20px; max-height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+.msg { max-width: 80%; padding: 10px 14px; border-radius: 16px; font-size: 0.87rem; line-height: 1.5; }
+.msg.bot { background: var(--light-gold); color: var(--dark); align-self: flex-start; border-bottom-left-radius: 4px; }
+.msg.user { background: var(--dark); color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
+.chat-input-area { padding: 15px; border-top: 1px solid #eee; display: flex; gap: 10px; }
+.chat-input-area input { flex: 1; border: 1px solid #ddd; border-radius: 25px; padding: 10px 16px; font-size: 0.87rem; outline: none; font-family: 'Raleway', sans-serif; }
+.chat-input-area input:focus { border-color: var(--gold); }
+.chat-send { background: var(--gold); border: none; color: var(--dark); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+.chat-send:hover { background: var(--amber); }
+
+/* CONTACT */
+.contact-section { padding: 80px 40px; background: var(--cream); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; max-width: 1000px; margin: 0 auto; }
+.contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--dark); margin-bottom: 15px; }
+.contact-info p { color: #666; line-height: 1.8; margin-bottom: 25px; }
+.contact-item { display: flex; align-items: center; gap: 15px; margin-bottom: 18px; }
+.contact-icon { width: 50px; height: 50px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--dark); font-size: 1.1rem; flex-shrink: 0; }
+.contact-item-info label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #999; font-weight: 600; }
+.contact-item-info p { color: var(--dark); font-weight: 600; margin: 0; }
+.contact-form { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--earth); margin-bottom: 7px; }
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%; padding: 12px 16px; border: 2px solid #eee; border-radius: 10px;
+  font-family: 'Raleway', sans-serif; font-size: 0.9rem; color: var(--dark);
+  transition: border 0.3s; outline: none; background: #fafafa;
+}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--gold); background: white; }
+.form-group textarea { height: 120px; resize: vertical; }
+.form-submit { width: 100%; background: var(--dark); color: white; border: none; padding: 15px; border-radius: 12px; font-size: 1rem; font-weight: 700; font-family: 'Raleway', sans-serif; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px; }
+.form-submit:hover { background: var(--gold); color: var(--dark); transform: translateY(-2px); }
+.form-success { display: none; text-align: center; padding: 20px; background: #e8f5e9; border-radius: 12px; color: #2e7d32; font-weight: 600; }
+
+/* FOOTER */
+footer { background: var(--dark); padding: 60px 40px 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-brand .logo-text { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.6rem; font-weight: 900; display: block; margin-bottom: 12px; }
+.footer-brand p { color: #888; font-size: 0.88rem; line-height: 1.8; max-width: 280px; }
+.footer-social { display: flex; gap: 12px; margin-top: 20px; }
+.footer-social a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #444; display: flex; align-items: center; justify-content: center; color: #888; text-decoration: none; transition: all 0.3s; font-size: 0.9rem; }
+.footer-social a:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
+.footer-col h4 { color: white; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 18px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { color: #888; text-decoration: none; font-size: 0.87rem; transition: color 0.3s; }
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid #333; padding-top: 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-bottom p { color: #666; font-size: 0.83rem; }
+.footer-bottom span { color: var(--gold); }
+
+/* LIGHTBOX */
+.lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 9999; align-items: center; justify-content: center; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 8px; }
+.lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 2.5rem; cursor: pointer; background: none; border: none; transition: color 0.2s; }
+.lightbox-close:hover { color: var(--gold); }
+
+/* TOAST */
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--forest); color: white; padding: 14px 28px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; z-index: 9999; transition: transform 0.4s ease; box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-item.wide, .gallery-item.big { grid-column: span 1; }
+  .gallery-item.tall, .gallery-item.big { grid-row: span 1; }
+}
+@media (max-width: 600px) {
+  nav { padding: 0 20px; }
+  .blog-section, .vlog-section, .gallery-section, .contact-section, .about-section { padding: 60px 20px; }
+  .hero h1 { font-size: 2.2rem; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .social-float { right: 10px; }
+  .chat-panel { width: 300px; right: 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- SOCIAL FLOATING -->
+<div class="social-float">
+  <a href="https://www.tiktok.com/@rebeccabiwott?_r=1&_t=ZS-96WS6LNlvQC" target="_blank" class="s-tiktok" title="TikTok">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=100088510357104" target="_blank" class="s-facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://instagram.com" target="_blank" class="s-instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://wa.me/254742266960" target="_blank" class="s-whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<!-- CHAT BUTTON -->
+<button class="chat-btn" onclick="toggleChat()">
+  <i class="fas fa-comments"></i> Message Me
+</button>
+
+<!-- CHAT PANEL -->
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header">
+    <img src="/mnt/user-data/uploads/1000217666.jpg" alt="Rebecca" onerror="this.src='https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100'">
+    <div class="chat-header-info">
+      <h4>Rebecca Biwwot</h4>
+      <span>● Online — replies fast</span>
+    </div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg bot">Hey there! 👋 Welcome to RebeccaBiwott Explores! I'm Rebecca — explorer of Africa's wild places and vibrant cities. What would you like to know?</div>
+  </div>
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="if(event.key==='Enter') sendMsg()">
+    <button class="chat-send" onclick="sendMsg()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <img src="/mnt/user-data/uploads/1000217666.jpg" alt="Rebecca" onerror="this.src='https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100'">
+    <span class="logo-text">Re<span>Biwwot</span> Explores</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#vlogs">Vlogs</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-badge">🌍 Africa Explorer</span>
+    <h1>Discover <em>Africa</em><br>Through My Eyes</h1>
+    <p>From misty forest trails and rolling hills to glittering city malls and hidden gems — every corner of Africa has a story worth telling.</p>
+    <div class="hero-btns">
+      <a href="#blog" class="btn-primary">Read the Blog</a>
+      <a href="#vlogs" class="btn-outline">Watch Vlogs</a>
+    </div>
+  </div>
+  <div class="hero-scroll" onclick="document.getElementById('blog').scrollIntoView()">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- PROFILE STRIP -->
+<div class="profile-strip">
+  <div class="profile-img-wrap">
+    <img class="profile-img" src="/mnt/user-data/uploads/1000217666.jpg" alt="Rebecca Biwwot" onerror="this.src='https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300'">
+    <div class="profile-badge">🌿</div>
+  </div>
+  <div class="profile-info">
+    <h2>Rebecca Biwwot</h2>
+    <div class="tagline">"From wild savannas to vibrant cities — Africa through my eyes"</div>
+    <p>I'm an African explorer, storyteller, and content creator documenting the beauty of Kenya and beyond. Forests, hills, malls, culture — I explore it all and share the journey with you.</p>
+    <div class="profile-stats">
+      <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Destinations</span></div>
+      <div class="stat"><span class="stat-num">15</span><span class="stat-label">Blog Posts</span></div>
+      <div class="stat"><span class="stat-num">10</span><span class="stat-label">Vlogs</span></div>
+      <div class="stat"><span class="stat-num">5K+</span><span class="stat-label">Followers</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG SECTION -->
+<section class="blog-section" id="blog">
+  <div class="section-header">
+    <span class="section-label">🌿 Latest Stories</span>
+    <h2>From My Blog</h2>
+    <p>Deep dives into Africa's most spectacular places — written from the trail, the summit, and the street.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="blog-grid" id="blogGrid">
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=600" alt="Kakamega Forest">
+        <span class="blog-cat">🌿 Forest</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Kakamega, Kenya <i class="fas fa-clock"></i> 5 min read</div>
+        <h4>Lost in Kakamega: Kenya's Ancient Rainforest</h4>
+        <p>Walking through 400-year-old trees, rare birds calling above, and the hush of pure wilderness. A spiritual experience.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600" alt="Ngong Hills">
+        <span class="blog-cat">⛰️ Hills</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya <i class="fas fa-clock"></i> 6 min read</div>
+        <h4>Sunrise on the Ngong Hills: Golden Hour Above Nairobi</h4>
+        <p>I woke at 4am to catch this view. The golden light, the cool wind, the city far below — worth every step.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600" alt="Two Rivers Mall">
+        <span class="blog-cat">🏬 City Life</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya <i class="fas fa-clock"></i> 4 min read</div>
+        <h4>Two Rivers Mall: Nairobi's Most Spectacular Shopping Destination</h4>
+        <p>East Africa's largest mall is a world unto itself — shops, food, a lake view, and a ferris wheel. Africa is rising.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=600" alt="Maasai Mara">
+        <span class="blog-cat">🦁 Wildlife</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Maasai Mara, Kenya <i class="fas fa-clock"></i> 8 min read</div>
+        <h4>My First Safari: 48 Hours in the Maasai Mara</h4>
+        <p>Lions sleeping under acacia trees. Elephants crossing the Mara River. I cried twice. This is Africa at its rawest.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1611348586840-ea9872d33411?w=600" alt="Kigali City">
+        <span class="blog-cat">🏙️ City</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda <i class="fas fa-clock"></i> 7 min read</div>
+        <h4>24 Hours in Kigali: Africa's Cleanest, Most Surprising City</h4>
+        <p>No plastic bags. Immaculate streets. A city that actually works. Rwanda left me speechless and humbled.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600" alt="Mount Kenya">
+        <span class="blog-cat">🏔️ Mountains</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Mount Kenya <i class="fas fa-clock"></i> 10 min read</div>
+        <h4>Climbing Mount Kenya: A Journey to Africa's Second Peak</h4>
+        <p>Cold, breathless, and utterly magnificent. Standing above the clouds on Kenya's highest mountain changed me.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600" alt="Diani Beach">
+        <span class="blog-cat">🏖️ Coast</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Diani, Kenya <i class="fas fa-clock"></i> 5 min read</div>
+        <h4>Diani Beach: Kenya's Most Breathtaking Coastal Paradise</h4>
+        <p>White powder sand, turquoise waters, and swaying palm trees. Diani is proof that paradise exists in Kenya.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600" alt="Nairobi City">
+        <span class="blog-cat">🌆 Nairobi</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya <i class="fas fa-clock"></i> 6 min read</div>
+        <h4>Nairobi After Dark: The City That Never Truly Sleeps</h4>
+        <p>Rooftop bars, night markets, jazz clubs, and street food stalls — Nairobi's nightlife scene is electric and alive.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600" alt="Hell's Gate">
+        <span class="blog-cat">🌋 Nature</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Naivasha, Kenya <i class="fas fa-clock"></i> 7 min read</div>
+        <h4>Hell's Gate National Park: Cycling Among Giraffes in Kenya</h4>
+        <p>The only park where you can cycle, hike, and walk alongside zebras and giraffes. An absolutely wild experience.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=600" alt="Aberdare Forest">
+        <span class="blog-cat">🌿 Forest</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Aberdares, Kenya <i class="fas fa-clock"></i> 8 min read</div>
+        <h4>The Aberdare Forest: Mist, Waterfalls and Wild Kenya</h4>
+        <p>Waterfalls crashing through bamboo forests, leopards hidden in mist — the Aberdares are Kenya's best kept secret.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600" alt="Westgate Mall">
+        <span class="blog-cat">🏬 City Life</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya <i class="fas fa-clock"></i> 4 min read</div>
+        <h4>The Best Malls in Nairobi You Must Experience</h4>
+        <p>Westgate, Garden City, The Hub Karen — Nairobi's malls are architectural marvels packed with food, fashion and fun.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600" alt="Samburu">
+        <span class="blog-cat">🦒 Wildlife</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Samburu, Kenya <i class="fas fa-clock"></i> 6 min read</div>
+        <h4>Samburu National Reserve: Kenya's Most Underrated Safari</h4>
+        <p>While everyone goes to Mara, Samburu sits quietly offering reticulated giraffes, Grevy's zebras, and no crowds.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600" alt="Lake Nakuru">
+        <span class="blog-cat">🦩 Lakes</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Nakuru, Kenya <i class="fas fa-clock"></i> 5 min read</div>
+        <h4>Lake Nakuru: A Sea of Pink Flamingos and White Rhinos</h4>
+        <p>Thousands of flamingos turning the lake pink at sunrise. White rhinos grazing on the shore. Kenya is magic.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600" alt="Lamu Island">
+        <span class="blog-cat">🏝️ Islands</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Lamu, Kenya <i class="fas fa-clock"></i> 9 min read</div>
+        <h4>Lamu Old Town: Stepping Back Into Kenya's Swahili Soul</h4>
+        <p>No cars, no rush. Just ancient coral houses, donkeys, dhow boats, and the most soulful culture in East Africa.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-img-wrap">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Longonot Crater">
+        <span class="blog-cat">🌋 Volcano</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><i class="fas fa-map-marker-alt"></i> Naivasha, Kenya <i class="fas fa-clock"></i> 7 min read</div>
+        <h4>Hiking Mount Longonot: Into the Crater of an Ancient Volcano</h4>
+        <p>A steep hike up Kenya's youngest volcano reveals a stunning crater floor with forests hiding buffalo and leopards.</p>
+        <a href="#" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VLOGS SECTION -->
+<section class="vlog-section" id="vlogs">
+  <div class="section-header">
+    <span class="section-label" style="background:rgba(212,160,23,0.2); color:var(--gold);">🎬 Watch Now</span>
+    <h2>My Vlogs</h2>
+    <p style="color:#aaa">Raw, real and unfiltered — join me on these African adventures.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="vlog-grid">
+
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=600" alt="Serengeti">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">18:32</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">Tanzania</span>
+        <h4>Walking the Serengeti Solo — Raw & Real</h4>
+        <p>My solo journey through Africa's greatest wilderness. Nothing but wild animals and open sky.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>24K views</span><span><i class="fas fa-heart"></i>1.2K</span></div>
+      </div>
+    </div>
+
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600" alt="Ngong Hills vlog">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">12:15</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">Kenya</span>
+        <h4>Hiking the Ngong Hills at Sunrise — Nairobi's Best View</h4>
+        <p>4AM alarm. Worth every second. The view from Ngong Hills will change your life.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>18K views</span><span><i class="fas fa-heart"></i>980</span></div>
+      </div>
+    </div>
+
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=600" alt="Kakamega vlog">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">22:07</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">Forest</span>
+        <h4>Exploring Kakamega Forest — Kenya's Hidden Jungle</h4>
+        <p>Deep inside Kenya's only tropical rainforest. Ancient trees, rare monkeys, and pure magic.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>31K views</span><span><i class="fas fa-heart"></i>2.1K</span></div>
+      </div>
+    </div>
+
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1611348586840-ea9872d33411?w=600" alt="Kigali vlog">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">28:44</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">Rwanda</span>
+        <h4>Full Day in Kigali — Africa's Most Modern City</h4>
+        <p>24 hours discovering why Kigali is now the standard for African cities. Jaw-dropping.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>42K views</span><span><i class="fas fa-heart"></i>3.4K</span></div>
+      </div>
+    </div>
+
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600" alt="Mara vlog">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">35:20</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">Safari</span>
+        <h4>Maasai Mara Safari Vlog — The Big Five and More</h4>
+        <p>The wildest two days of my life. Lions, leopards, elephants — all in one incredible place.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>67K views</span><span><i class="fas fa-heart"></i>5.6K</span></div>
+      </div>
+    </div>
+
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600" alt="Lamu vlog">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">19:55</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">Coast</span>
+        <h4>Lamu Island Vlog — No Cars, Pure Soul</h4>
+        <p>Dhow rides, Swahili food, ancient streets and the most peaceful atmosphere in Africa.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>29K views</span><span><i class="fas fa-heart"></i>2.8K</span></div>
+      </div>
+    </div>
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600" alt="Nairobi night vlog">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">24:30</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">City</span>
+        <h4>Nairobi Night Out — What Happens After Dark</h4>
+        <p>Rooftop bars, street food and city lights. Nairobi's nightlife scene is a whole other world.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>38K views</span><span><i class="fas fa-heart"></i>3.1K</span></div>
+      </div>
+    </div>
+
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Longonot vlog">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">16:48</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">Hiking</span>
+        <h4>Into the Volcano — Mount Longonot Day Hike</h4>
+        <p>A wild crater hike above the Rift Valley. Buffalo sightings, steep trails and stunning views.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>22K views</span><span><i class="fas fa-heart"></i>1.9K</span></div>
+      </div>
+    </div>
+
+    <div class="vlog-card">
+      <div class="vlog-thumb">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600" alt="Hell's Gate vlog">
+        <div class="vlog-overlay"><div class="play-btn">▶</div></div>
+        <span class="vlog-duration">20:05</span>
+      </div>
+      <div class="vlog-body">
+        <span class="vlog-tag">Kenya</span>
+        <h4>Cycling Hell's Gate — Among Giraffes & Zebras</h4>
+        <p>The world's wildest cycle ride. Pedalling through gorges with wildlife walking beside you.</p>
+        <div class="vlog-stats"><span><i class="fas fa-eye"></i>47K views</span><span><i class="fas fa-heart"></i>4.2K</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="section-header">
+    <span class="section-label">📸 Visual Stories</span>
+    <h2>Gallery</h2>
+    <p>50 moments from across Africa — forests, hills, cities, coasts and skies.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item big" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=800" alt="Serengeti"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=400" alt="Forest"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=400" alt="Hills"></div>
+    <div class="gallery-item tall" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=400" alt="Savanna"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1611348586840-ea9872d33411?w=400" alt="City"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400" alt="Nairobi"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400" alt="Gorge"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=400" alt="Waterfall"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400" alt="Shopping"></div>
+    <div class="gallery-item tall" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Flamingos"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=400" alt="Lamu"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Volcano"></div>
+    <div class="gallery-item wide" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600" alt="Rift Valley"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?w=400" alt="Coast"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1567380226577-a9cec4a62f7d?w=400" alt="Forest trail"></div>
+    <div class="gallery-item big" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=800" alt="Elephant"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1548767797-d8c844163c4a?w=400" alt="Giraffe"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=400" alt="Fox"></div>
+    <div class="gallery-item wide" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600" alt="Landscape"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=400" alt="Green valley"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400" alt="Deep forest"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400" alt="Hills aerial"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=400" alt="Pine trees"></div>
+    <div class="gallery-item tall" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=400" alt="Lake sunrise"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400" alt="Nature path"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=400" alt="Misty forest"></div>
+    <div class="gallery-item wide" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600" alt="Waterfall wide"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1458668383970-8ddd3927deed?w=400" alt="Mountain peak"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400" alt="Rocky hill"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1477322524744-0eece9e79640?w=400" alt="Snowy peaks"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400" alt="Green hills"></div>
+    <div class="gallery-item big" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800" alt="Nature wide"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400" alt="Beach 1"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400" alt="Beach 2"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400" alt="Hotel pool"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1567016526105-22da7c13161a?w=400" alt="City market"></div>
+    <div class="gallery-item wide" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1555636222-cae831e670b3?w=600" alt="Street food"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=400" alt="Sunset sea"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=400" alt="Snow mountain"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=400" alt="Sunset hills"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?w=400" alt="Road trip"></div>
+    <div class="gallery-item tall" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1490750967868-88df5691cc4d?w=400" alt="Flowers hill"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400" alt="Sunrise"></div>
+    <div class="gallery-item wide" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=600" alt="African sky"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1446439356520-9df43dfd78bb?w=400" alt="Tropical leaves"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=400" alt="Rift valley 2"></div>
+  </div>
+</section>
+
+<!-- UPLOAD SECTION -->
+<section class="upload-section" id="upload">
+  <h2>📸 Upload Your Photos</h2>
+  <p>Share your Africa moments — add them to the gallery!</p>
+  <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+    <i class="fas fa-cloud-upload-alt"></i>
+    <p>Click to upload or <span>drag & drop</span> your photos here</p>
+    <p style="font-size:0.8rem; margin-top:8px; color:#666">PNG, JPG, WEBP up to 10MB</p>
+  </div>
+  <input type="file" id="fileInput" multiple accept="image/*" onchange="handleUpload(event)">
+  <div class="uploaded-preview" id="uploadedPreview"></div>
+  <div id="uploadCount" style="color: #888; margin-top: 15px; font-size: 0.85rem;"></div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap">
+      <img class="about-img" src="/mnt/user-data/uploads/1000217666.jpg" alt="Rebecca Biwwot" onerror="this.src='https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600'">
+      <div class="about-img-accent"></div>
+    </div>
+    <div class="about-content">
+      <span class="section-label">About Me</span>
+      <h2>I'm Rebecca Biwwot —<br>Explorer of <em>Beautiful Africa</em></h2>
+      <p>Born and raised in Kenya, I've always believed that Africa's greatest stories are told not in books, but on the trails, in the forests, at the summit of mountains, and in the buzzing hearts of its cities.</p>
+      <p>I started RebeccaBiwwot Explores to show the world what I see every day — a continent of breathtaking beauty, rich culture, warm people, and endless adventure. From the misty heights of Aberdare Forest to the neon lights of Nairobi's malls, every destination has changed me.</p>
+      <p>Through my blog and vlogs, I want you to feel what I feel — the cool highland breeze, the thunder of a waterfall, the hush of a wild savanna at dawn. Africa is not just a place. It is a feeling.</p>
+      <div class="about-tags">
+        <span class="about-tag">🌿 Forest Explorer</span>
+        <span class="about-tag">⛰️ Hill Hiker</span>
+        <span class="about-tag">🦁 Safari Lover</span>
+        <span class="about-tag">🏙️ City Explorer</span>
+        <span class="about-tag">🎬 Vlogger</span>
+        <span class="about-tag">✍️ Storyteller</span>
+        <span class="about-tag">🇰🇪 Kenyan</span>
+        <span class="about-tag">🌍 Pan-African</span>
+      </div>
+      <div style="display:flex; gap:15px; flex-wrap:wrap; margin-top:10px;">
+        <a href="#contact" class="btn-primary" style="font-size:0.85rem; padding:12px 28px;">Work With Me</a>
+        <a href="https://wa.me/254742266960" target="_blank" class="btn-outline" style="font-size:0.85rem; padding:12px 28px; border-color:var(--gold); color:var(--gold);">WhatsApp Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+  <div class="section-header">
+    <span class="section-label">📬 Get in Touch</span>
+    <h2>Contact Rebecca</h2>
+    <p>Collaborations, sponsorships, travel partnerships or just saying hello — I'd love to hear from you!</p>
+    <div class="divider"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Let's Create Something Amazing Together</h3>
+      <p>Whether you're a brand looking to reach Africa's growing travel community, a tourism board wanting to showcase your destination, or a fellow explorer wanting to collaborate — my inbox is open.</p>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <div class="contact-item-info"><label>Phone / WhatsApp</label><p>+254 742 266 960</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="contact-item-info"><label>Based In</label><p>Nairobi, Kenya 🇰🇪</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-globe"></i></div>
+        <div class="contact-item-info"><label>Coverage</label><p>All of Africa & Beyond</p></div>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:25px; flex-wrap:wrap;">
+        <a href="https://www.tiktok.com/@rebeccabiwott?_r=1&_t=ZS-96WS6LNlvQC" target="_blank" style="background:#000; color:white; padding:10px 20px; border-radius:25px; text-decoration:none; font-size:0.82rem; font-weight:700; display:flex; align-items:center; gap:8px;"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://www.facebook.com/profile.php?id=100088510357104" target="_blank" style="background:#1877F2; color:white; padding:10px 20px; border-radius:25px; text-decoration:none; font-size:0.82rem; font-weight:700; display:flex; align-items:center; gap:8px;"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://wa.me/254742266960" target="_blank" style="background:#25D366; color:white; padding:10px 20px; border-radius:25px; text-decoration:none; font-size:0.82rem; font-weight:700; display:flex; align-items:center; gap:8px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://instagram.com" target="_blank" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); color:white; padding:10px 20px; border-radius:25px; text-decoration:none; font-size:0.82rem; font-weight:700; display:flex; align-items:center; gap:8px;"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div id="formSuccess" class="form-success">
+        <i class="fas fa-check-circle" style="font-size:2rem; color:#4CAF50; display:block; margin-bottom:10px;"></i>
+        Message sent! Rebecca will get back to you within 24 hours. 🌍
+      </div>
+      <div id="formBody">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Your name"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Last name"></div>
+        </div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+        <div class="form-group"><label>Phone (Optional)</label><input type="tel" placeholder="+254..."></div>
+        <div class="form-group">
+          <label>Enquiry Type</label>
+          <select>
+            <option>Brand Collaboration</option>
+            <option>Tourism Partnership</option>
+            <option>Media / Press</option>
+            <option>General Enquiry</option>
+            <option>Just Saying Hello 👋</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Your Message</label><textarea placeholder="Tell me about your project or just say hello..."></textarea></div>
+        <button class="form-submit" onclick="submitForm()">Send Message <i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-text">🌍 RebeccaBiwott Explores</span>
+      <p>Africa's stories, told through my eyes. Forests, hills, cities and wild places — join me on the journey across this extraordinary continent.</p>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@rebeccabiwott?_r=1&_t=ZS-96WS6LNlvQC" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100088510357104" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/254742266960" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#blog">Blog Posts</a></li>
+        <li><a href="#vlogs">Vlogs</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About Rebecca</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Destinations</h4>
+      <ul>
+        <li><a href="#">Kenya</a></li>
+        <li><a href="#">Tanzania</a></li>
+        <li><a href="#">Rwanda</a></li>
+        <li><a href="#">East Africa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/254742266960">+254 742 266 960</a></li>
+        <li><a href="#contact">Send a Message</a></li>
+        <li><a href="#">Collaborations</a></li>
+        <li><a href="#">Press Kit</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 <span>RebeccaBiwwot Explores</span> — Made with ❤️ for Africa</p>
+    <p>Crafted by <span>Rebecca Biwwot</span> 🇰🇪</p>
+  </div>
+</footer>
+
+<script>
+// CHAT
+function toggleChat() {
+  const panel = document.getElementById('chatPanel');
+  panel.classList.toggle('open');
+}
+
+const autoReplies = [
+  "Thanks for reaching out! 🌍 I'll personally reply to you as soon as I can. For urgent matters, WhatsApp me on +254742266960!",
+  "Hey! 👋 Great to hear from you. I'm probably out exploring somewhere beautiful right now, but I'll be back soon!",
+  "Asante for your message! 🦁 Check out my latest blog posts while you wait for my reply.",
+  "Hello! I love connecting with fellow Africa lovers. I'll reply very soon — promise! 🌿"
+];
+let replyIdx = 0;
+
+function sendMsg() {
+  const input = document.getElementById('chatInput');
+  const msgs = document.getElementById('chatMessages');
+  if (!input.value.trim()) return;
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg user';
+  userMsg.textContent = input.value;
+  msgs.appendChild(userMsg);
+  input.value = '';
+  msgs.scrollTop = msgs.scrollHeight;
+  setTimeout(() => {
+    const botMsg = document.createElement('div');
+    botMsg.className = 'msg bot';
+    botMsg.textContent = autoReplies[replyIdx % autoReplies.length];
+    replyIdx++;
+    msgs.appendChild(botMsg);
+    msgs.scrollTop = msgs.scrollHeight;
+  }, 1000);
+}
+
+// UPLOAD
+function handleUpload(e) {
+  const files = Array.from(e.target.files);
+  const preview = document.getElementById('uploadedPreview');
+  const count = document.getElementById('uploadCount');
+  files.forEach(file => {
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      const img = document.createElement('img');
+      img.src = ev.target.result;
+      preview.appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  });
+  count.textContent = `✅ ${files.length} photo(s) uploaded successfully!`;
+  showToast(`📸 ${files.length} photo(s) added to your gallery!`);
+}
+
+// LIGHTBOX
+function openLightbox(el) {
+  const src = el.querySelector('img').src;
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+// FORM
+function submitForm() {
+  document.getElementById('formBody').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+  showToast('✅ Message sent to Rebecca!');
+}
+
+// TOAST
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// MOBILE NAV
+function toggleMobileNav() {
+  const links = document.querySelector('.nav-links');
+  if (links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
+    links.style.cssText = 'display:flex; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:#1a0a00; padding:20px 40px; gap:15px;';
+  }
+}
+
+// SCROLL ANIMATIONS
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.blog-card, .vlog-card, .gallery-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
